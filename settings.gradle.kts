@@ -1,4 +1,4 @@
-rootProject.name = "gradle-no-buildsrc"
+rootProject.name = "android-no-buildsrc"
 
 pluginManagement {
     repositories {
