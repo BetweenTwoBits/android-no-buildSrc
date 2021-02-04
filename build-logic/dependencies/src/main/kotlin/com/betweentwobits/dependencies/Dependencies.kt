@@ -11,7 +11,7 @@ class Dependencies : Plugin<Project> {
 
 object Versions {
     // build
-    const val KOTLIN = "1.4.21"
+    const val KOTLIN = "1.4.30"
     const val GRADLE_PLUGIN = "4.1.2"
     const val SPOTLESS = "5.9.0"
 
