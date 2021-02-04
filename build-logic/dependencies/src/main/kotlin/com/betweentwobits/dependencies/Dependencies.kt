@@ -18,6 +18,7 @@ class Dependencies : Plugin<Project> {
         const val MIN_SDK = 21
         const val TARGET_SDK = 30
 
+        const val ANDROIDX_ANNOTATIONS = "1.1.0"
         const val ANDROIDX_APP_COMPAT = "1.2.0"
         const val ANDROIDX_CORE_KTX = "1.3.2"
         const val ANDROID_MATERIAL = "1.2.1"
