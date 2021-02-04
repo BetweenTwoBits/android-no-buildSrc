@@ -8,6 +8,7 @@ version = "SNAPSHOT"
 
 repositories {
     mavenCentral()
+    jcenter()
 }
 
 kotlinDslPluginOptions {

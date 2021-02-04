@@ -1,7 +1,8 @@
 buildscript {
     repositories {
-        google()
         mavenCentral()
+        jcenter()
+        google()
     }
 
     // TODO Does this file even need to exist?
