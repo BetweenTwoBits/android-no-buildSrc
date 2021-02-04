@@ -7,7 +7,7 @@ group = "com.betweentwobits.dependencies"
 version = "SNAPSHOT"
 
 repositories {
-    jcenter()
+    mavenCentral()
 }
 
 kotlinDslPluginOptions {
