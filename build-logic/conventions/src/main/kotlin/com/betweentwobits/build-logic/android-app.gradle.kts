@@ -1,4 +1,5 @@
-import com.betweentwobits.dependencies.Dependencies
+import com.betweentwobits.dependencies.Libraries
+import com.betweentwobits.dependencies.Versions
 
 plugins {
     id("com.android.application")
@@ -13,12 +14,12 @@ repositories {
 }
 
 android {
-    compileSdkVersion(Dependencies.COMPILE_SDK)
+    compileSdkVersion(Versions.COMPILE_SDK)
 
     defaultConfig {
         applicationId("com.betweentwobits.app")
-        minSdkVersion(Dependencies.MIN_SDK)
-        targetSdkVersion(Dependencies.TARGET_SDK)
+        minSdkVersion(Versions.MIN_SDK)
+        targetSdkVersion(Versions.TARGET_SDK)
         versionCode = 1
         versionName = "1.0"
     }
@@ -40,9 +41,9 @@ android {
 }
 
 dependencies {
-    implementation("org.jetbrains.kotlin:kotlin-stdlib:${Dependencies.KOTLIN}")
-    implementation("androidx.core:core-ktx:${Dependencies.ANDROIDX_CORE_KTX}")
-    implementation("androidx.appcompat:appcompat:${Dependencies.ANDROIDX_APP_COMPAT}")
-    implementation("com.google.android.material:material:${Dependencies.ANDROID_MATERIAL}")
-    implementation("androidx.constraintlayout:constraintlayout:${Dependencies.CONSTRAINT_LAYOUT}")
+    implementation(Libraries.KOTLIN_STDLIB)
+    implementation(Libraries.ANDROIDX_CORE_KTX)
+    implementation(Libraries.ANDROIDX_APP_COMPAT)
+    implementation(Libraries.ANDROID_MATERIAL)
+    implementation(Libraries.CONSTRAINT_LAYOUT)
 }

@@ -1,4 +1,4 @@
-import com.betweentwobits.dependencies.Dependencies
+import com.betweentwobits.dependencies.Libraries
 
 plugins {
     `kotlin-dsl`
@@ -18,7 +18,7 @@ kotlinDslPluginOptions {
 
 dependencies {
     implementation("com.betweentwobits.dependencies:dependencies:SNAPSHOT")
-    implementation("com.android.tools.build:gradle:${Dependencies.GRADLE_PLUGIN}")
-    implementation(kotlin("gradle-plugin", Dependencies.KOTLIN))
-    implementation("com.diffplug.spotless:spotless-plugin-gradle:${Dependencies.SPOTLESS}")
+    implementation(Libraries.GRADLE_PLUGIN)
+    implementation(Libraries.KOTLIN_GRADLE_PLUGIN)
+    implementation(Libraries.SPOTLESS)
 }

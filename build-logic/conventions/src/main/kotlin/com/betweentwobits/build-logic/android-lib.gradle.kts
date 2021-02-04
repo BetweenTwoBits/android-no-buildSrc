@@ -1,4 +1,5 @@
-import com.betweentwobits.dependencies.Dependencies
+import com.betweentwobits.dependencies.Libraries
+import com.betweentwobits.dependencies.Versions
 
 plugins {
     id("com.android.library")
@@ -13,11 +14,11 @@ repositories {
 }
 
 android {
-    compileSdkVersion(Dependencies.COMPILE_SDK)
+    compileSdkVersion(Versions.COMPILE_SDK)
 
     defaultConfig {
-        minSdkVersion(Dependencies.MIN_SDK)
-        targetSdkVersion(Dependencies.TARGET_SDK)
+        minSdkVersion(Versions.MIN_SDK)
+        targetSdkVersion(Versions.TARGET_SDK)
         versionCode = 1
         versionName = "1.0"
     }
@@ -39,7 +40,7 @@ android {
 }
 
 dependencies {
-    implementation("org.jetbrains.kotlin:kotlin-stdlib:${Dependencies.KOTLIN}")
-    implementation("androidx.core:core-ktx:${Dependencies.ANDROIDX_CORE_KTX}")
-    implementation("androidx.appcompat:appcompat:${Dependencies.ANDROIDX_APP_COMPAT}")
+    implementation(Libraries.KOTLIN_STDLIB)
+    implementation(Libraries.ANDROIDX_CORE_KTX)
+    implementation(Libraries.ANDROIDX_APP_COMPAT)
 }
