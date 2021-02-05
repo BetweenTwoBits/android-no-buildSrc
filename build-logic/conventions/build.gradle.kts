@@ -6,12 +6,6 @@ plugins {
     id("dependencies")
 }
 
-repositories {
-    mavenCentral()
-    jcenter()
-    google()
-}
-
 kotlinDslPluginOptions {
     experimentalWarning.set(false)
 }

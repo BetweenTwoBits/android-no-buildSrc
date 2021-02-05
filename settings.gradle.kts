@@ -7,6 +7,14 @@ pluginManagement {
     }
 }
 
+dependencyResolutionManagement {
+    repositories {
+        mavenCentral()
+        jcenter()
+        google()
+    }
+}
+
 includeBuild("build-logic/dependencies")
 includeBuild("build-logic/conventions")
 

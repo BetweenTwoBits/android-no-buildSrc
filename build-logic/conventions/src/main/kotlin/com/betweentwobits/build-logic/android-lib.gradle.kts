@@ -7,12 +7,6 @@ plugins {
     id("spotless-conf")
 }
 
-repositories {
-    mavenCentral()
-    jcenter()
-    google()
-}
-
 android {
     compileSdkVersion(Versions.COMPILE_SDK)
 

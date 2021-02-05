@@ -1,10 +1,4 @@
 buildscript {
-    repositories {
-        mavenCentral()
-        jcenter()
-        google()
-    }
-
     // TODO Does this file even need to exist?
     dependencies {
         classpath("com.android.tools.build:gradle:4.1.2")

@@ -6,11 +6,6 @@ plugins {
 group = "com.betweentwobits.dependencies"
 version = "SNAPSHOT"
 
-repositories {
-    mavenCentral()
-    jcenter()
-}
-
 kotlinDslPluginOptions {
     experimentalWarning.set(false)
 }
