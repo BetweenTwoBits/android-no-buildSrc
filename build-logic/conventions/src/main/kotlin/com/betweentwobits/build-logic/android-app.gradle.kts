@@ -2,7 +2,6 @@ import com.betweentwobits.dependencies.Versions
 import org.gradle.accessors.dm.LibrariesForLibs
 
 plugins {
-    base
     id("com.android.application")
     id("kotlin-android")
     id("spotless-conf")
