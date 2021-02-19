@@ -1,5 +1,3 @@
-import com.betweentwobits.dependencies.Libraries
-
 plugins {
     id("android-app")
 }
@@ -12,5 +10,5 @@ android {
 
 dependencies {
     implementation(project(":myLibrary"))
-    implementation(Libraries.ANDROIDX_ANNOTATIONS)
+    implementation(libs.androidx.annotations)
 }

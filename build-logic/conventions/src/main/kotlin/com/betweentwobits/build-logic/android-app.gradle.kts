@@ -1,11 +1,14 @@
-import com.betweentwobits.dependencies.Libraries
 import com.betweentwobits.dependencies.Versions
+import org.gradle.accessors.dm.LibrariesForLibs
 
 plugins {
+    base
     id("com.android.application")
     id("kotlin-android")
     id("spotless-conf")
 }
+
+val libs = the<LibrariesForLibs>()
 
 android {
     compileSdkVersion(Versions.COMPILE_SDK)
@@ -35,9 +38,9 @@ android {
 }
 
 dependencies {
-    implementation(Libraries.KOTLIN_STDLIB)
-    implementation(Libraries.ANDROIDX_CORE_KTX)
-    implementation(Libraries.ANDROIDX_APP_COMPAT)
-    implementation(Libraries.ANDROID_MATERIAL)
-    implementation(Libraries.CONSTRAINT_LAYOUT)
+    implementation(libs.kotlin.stdlib)
+    implementation(libs.androidx.core.ktx)
+    implementation(libs.androidx.app.compat)
+    implementation(libs.android.material)
+    implementation(libs.androidx.constraint.layout)
 }

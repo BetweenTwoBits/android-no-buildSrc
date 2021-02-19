@@ -1,0 +1,25 @@
+[versions]
+android-gradle-plugin = "4.1.2"
+android-material = "1.2.1"
+androidx-annotations = "1.1.0"
+androidx-app_compat = "1.2.0"
+androidx-core-ktx = "1.3.2"
+androidx-constraint-layout = "2.0.4"
+kotlin = "1.4.30"
+spotless = "5.9.0"
+
+[dependencies]
+android-gradle-plugin = { module = "com.android.tools.build:gradle", version.ref = "android-gradle-plugin" }
+android-material = { module = "com.google.android.material:material", version.ref = "android-material" }
+androidx-annotations = { module = "androidx.annotation:annotation", version.ref = "androidx-annotations" }
+androidx-app-compat = { module = "androidx.appcompat:appcompat", version.ref = "androidx-app_compat" }
+androidx-core-ktx = { module = "androidx.core:core-ktx", version.ref = "androidx-core-ktx" }
+androidx-constraint-layout = { module = "androidx.constraintlayout:constraintlayout", version.ref = "androidx-constraint-layout" }
+kotlin-gradle-plugin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
+kotlin-stdlib = { module = "org.jetbrains.kotlin:kotlin-stdlib", version.ref = "kotlin" }
+spotless = { module = "com.diffplug.spotless:spotless-plugin-gradle", version.ref = "spotless" }
+
+[plugins]
+com.autonomousapps.dependency-analysis = "0.70.0"
+com.github.ben-manes.versions = "0.36.0"
+com.osacky.doctor = "0.7.0"

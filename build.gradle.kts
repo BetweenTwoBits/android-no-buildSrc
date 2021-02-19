@@ -8,13 +8,13 @@ buildscript {
 
 plugins {
     // runs automatically
-    id("com.osacky.doctor").version("0.7.0")
+    id("com.osacky.doctor")
 
     // run with ./gradlew buildHealth
-    id("com.autonomousapps.dependency-analysis").version("0.70.0")
+    id("com.autonomousapps.dependency-analysis")
 
     // run with ./gradlew dependencyUpdates
-    id("com.github.ben-manes.versions").version("0.36.0")
+    id("com.github.ben-manes.versions")
 }
 
 fun isNonStable(version: String) = listOf("alpha", "beta", "rc", "cr", "m", "preview")

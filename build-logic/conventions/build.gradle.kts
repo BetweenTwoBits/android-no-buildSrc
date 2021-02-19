@@ -1,5 +1,3 @@
-import com.betweentwobits.dependencies.Libraries
-
 plugins {
     `kotlin-dsl`
     `java-gradle-plugin`
@@ -11,8 +9,9 @@ kotlinDslPluginOptions {
 }
 
 dependencies {
+    implementation(files(libs.javaClass.protectionDomain.codeSource.location))
     implementation("com.betweentwobits.dependencies:dependencies:SNAPSHOT")
-    implementation(Libraries.GRADLE_PLUGIN)
-    implementation(Libraries.KOTLIN_GRADLE_PLUGIN)
-    implementation(Libraries.SPOTLESS)
+    implementation(libs.android.gradle.plugin)
+    implementation(libs.kotlin.gradle.plugin)
+    implementation(libs.spotless)
 }
