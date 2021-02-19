@@ -6,10 +6,6 @@ plugins {
 group = "com.betweentwobits.dependencies"
 version = "SNAPSHOT"
 
-kotlinDslPluginOptions {
-    experimentalWarning.set(false)
-}
-
 gradlePlugin {
     plugins.register("dependencies") {
         id = "dependencies"

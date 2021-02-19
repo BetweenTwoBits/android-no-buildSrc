@@ -4,10 +4,6 @@ plugins {
     id("dependencies")
 }
 
-kotlinDslPluginOptions {
-    experimentalWarning.set(false)
-}
-
 dependencies {
     implementation(files(libs.javaClass.protectionDomain.codeSource.location))
     implementation("com.betweentwobits.dependencies:dependencies:SNAPSHOT")
