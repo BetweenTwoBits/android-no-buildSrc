@@ -5,7 +5,7 @@ plugins {
 }
 
 dependencies {
-    implementation(files(libs.javaClass.protectionDomain.codeSource.location))
+    implementation(files(libs.javaClass.superclass.protectionDomain.codeSource.location))
     implementation("com.betweentwobits.dependencies:dependencies:SNAPSHOT")
     implementation(libs.android.gradle.plugin)
     implementation(libs.kotlin.gradle.plugin)
