@@ -9,11 +9,11 @@ plugins {
 val libs = the<LibrariesForLibs>()
 
 android {
-    compileSdkVersion(libs.versions.compileSdk)
+    compileSdkVersion(libs.versions.compileSdk.get().toInt())
 
     defaultConfig {
-        minSdkVersion(libs.versions.minSdk)
-        targetSdkVersion(libs.versions.targetSdk)
+        minSdkVersion(libs.versions.minSdk.get().toInt())
+        targetSdkVersion(libs.versions.targetSdk.get().toInt())
         versionCode = 1
         versionName = "1.0"
     }
