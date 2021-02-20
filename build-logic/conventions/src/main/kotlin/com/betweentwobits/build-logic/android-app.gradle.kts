@@ -1,4 +1,3 @@
-import com.betweentwobits.dependencies.Versions
 import org.gradle.accessors.dm.LibrariesForLibs
 
 plugins {
@@ -10,12 +9,12 @@ plugins {
 val libs = the<LibrariesForLibs>()
 
 android {
-    compileSdkVersion(Versions.COMPILE_SDK)
+    compileSdkVersion(libs.versions.compileSdk)
 
     defaultConfig {
         applicationId("com.betweentwobits.app")
-        minSdkVersion(Versions.MIN_SDK)
-        targetSdkVersion(Versions.TARGET_SDK)
+        minSdkVersion(libs.versions.minSdk)
+        targetSdkVersion(libs.versions.targetSdk)
         versionCode = 1
         versionName = "1.0"
     }
