@@ -15,7 +15,6 @@ dependencyResolutionManagement {
     }
 }
 
-includeBuild("build-logic/dependencies")
 includeBuild("build-logic/conventions")
 
 include(":myLibrary")
