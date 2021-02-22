@@ -5,6 +5,7 @@ plugins {
 
     // run with ./gradlew buildHealth
     // uncommenting this causes `Unable to load class 'org.jetbrains.kotlin.gradle.dsl.KotlinProjectExtension'.`
+    // issue filed here: https://github.com/autonomousapps/dependency-analysis-android-gradle-plugin/issues/368
 //    id("com.autonomousapps.dependency-analysis")
 
     // run with ./gradlew dependencyUpdates
