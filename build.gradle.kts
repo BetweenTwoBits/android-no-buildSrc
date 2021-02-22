@@ -1,17 +1,10 @@
-buildscript {
-    // TODO Does this file even need to exist?
-    dependencies {
-        classpath("com.android.tools.build:gradle:4.1.2")
-        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.4.30")
-    }
-}
-
 plugins {
     // runs automatically
     id("com.osacky.doctor")
 
     // run with ./gradlew buildHealth
-    id("com.autonomousapps.dependency-analysis")
+    // uncommenting this causes `Unable to load class 'org.jetbrains.kotlin.gradle.dsl.KotlinProjectExtension'.`
+//    id("com.autonomousapps.dependency-analysis")
 
     // run with ./gradlew dependencyUpdates
     id("com.github.ben-manes.versions")
