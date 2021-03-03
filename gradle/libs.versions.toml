@@ -11,7 +11,7 @@ compile-sdk = "30"
 min-sdk = "21"
 target-sdk = "30"
 
-[dependencies]
+[libraries]
 android-gradle-plugin = { module = "com.android.tools.build:gradle", version.ref = "android-gradle-plugin" }
 android-material = { module = "com.google.android.material:material", version.ref = "android-material" }
 androidx-annotations = { module = "androidx.annotation:annotation", version.ref = "androidx-annotations" }
