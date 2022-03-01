@@ -5,12 +5,12 @@ plugins {
 }
 
 android {
-    compileSdkVersion = 31
+    compileSdk = libs.versions.compile.sdk.get().toInt()
 
     defaultConfig {
         applicationId = "com.betweentwobits.app"
-        minSdkVersion = 21
-        targetSdkVersion = 31
+        minSdk = libs.versions.min.sdk.get().toInt()
+        targetSdk = libs.versions.target.sdk.get().toInt()
         versionCode = 1
         versionName = "1.0"
     }
