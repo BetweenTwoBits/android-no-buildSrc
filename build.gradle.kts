@@ -1,15 +1,15 @@
 // These plugins are all related to dependencies and build health
 plugins {
     // runs automatically
-    id("com.osacky.doctor")
+    alias(libs.plugins.doctor)
 
     // run with ./gradlew buildHealth
     // uncommenting this causes `Unable to load class 'org.jetbrains.kotlin.gradle.dsl.KotlinProjectExtension'.`
     // issue filed here: https://github.com/autonomousapps/dependency-analysis-android-gradle-plugin/issues/368
-//    id("com.autonomousapps.dependency-analysis")
+//    alias(libs.plugins.analyser)
 
     // run with ./gradlew dependencyUpdates
-    id("com.github.ben-manes.versions")
+    alias(libs.plugins.versions)
 }
 
 // Configure `com.github.ben-manes.versions` to only show final releases
