@@ -1,3 +1,25 @@
+import com.github.benmanes.gradle.versions.updates.DependencyUpdatesTask
+
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+    }
+
+    dependencies {
+        //val libs = project.extensions.getByType<VersionCatalogsExtension>().named("libs") as org.gradle.accessors.dm.LibrariesForLibs
+        //classpath(libs.android.gradle.plugin)
+        classpath("com.android.tools.build:gradle:7.1.2")
+        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.4.30")
+        //classpath(libs.kotlin.gradle.plugin)
+    }
+}
+
+tasks.register("clean", Delete::class) {
+    delete(rootProject.buildDir)
+}
+
 // These plugins are all related to dependencies and build health
 plugins {
     // runs automatically
@@ -13,10 +35,14 @@ plugins {
 }
 
 // Configure `com.github.ben-manes.versions` to only show final releases
-fun isNonStable(version: String) = listOf("alpha", "beta", "rc", "cr", "m", "preview")
-    .any { version.matches(".*[.\\-]$it[.\\-\\d]*".toRegex(RegexOption.IGNORE_CASE)) }
+fun String.isNonStable(): Boolean {
+    val stableKeyword = listOf("RELEASE", "FINAL", "GA").any { toUpperCase().contains(it) }
+    val regex = "^[0-9,.v-]+(-r)?$".toRegex()
+    val isStable = stableKeyword || regex.matches(this)
+    return isStable.not()
+}
 
-tasks.named("dependencyUpdates", com.github.benmanes.gradle.versions.updates.DependencyUpdatesTask::class.java).configure {
+tasks.withType<DependencyUpdatesTask> {
     gradleReleaseChannel = "current"
-    rejectVersionIf { isNonStable(candidate.version) && !isNonStable(currentVersion) }
+    rejectVersionIf { candidate.version.isNonStable() && !currentVersion.isNonStable() }
 }
