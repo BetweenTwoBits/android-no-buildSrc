@@ -1,20 +1,12 @@
-rootProject.name = "android-no-buildsrc"
-
-pluginManagement {
-    repositories {
-        google()
-        gradlePluginPortal()
-    }
-}
-
 dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
-        mavenCentral()
         google()
+        mavenCentral()
     }
 }
 
-includeBuild("build-logic/conventions")
-
-include(":myLibrary")
+rootProject.name = "android-no-buildsrc"
+//includeBuild("build-logic/conventions")
 include(":app")
+include(":myLibrary")
