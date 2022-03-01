@@ -7,6 +7,6 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "android-no-buildsrc"
-//includeBuild("build-logic/conventions")
+includeBuild("build-logic/conventions")
 include(":app")
 include(":myLibrary")

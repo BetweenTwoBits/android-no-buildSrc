@@ -1,7 +1,7 @@
 plugins {
     id("com.android.library")
     id("kotlin-android")
-    //id("spotless-conf")
+    id("spotless-conf")
 }
 
 android {
